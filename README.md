@@ -16,7 +16,7 @@
 ### 🧑‍💻 About me
 
 - 🎓 Studied at **Webster University**
-- ☕ Backend focus: **Java & Spring Boot** REST APIs
+- ☕ Backend focus: **Java & Spring Boot** REST APIs secured with **Spring Security & JWT**
 - ⚛️ Frontend: **React** (Vite), responsive, production-deployed UIs
 - 🤖 AI engineering: **LLM apps** with RAG, tool calling, structured outputs and evals
 - ☁️ Cloud & DevOps: **AWS**, **Terraform**, CI/CD pipelines
@@ -41,6 +41,9 @@
   <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/REST_APIs-005571?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white" />
 </p>
 
@@ -74,13 +77,31 @@
 
 ### 🚀 Featured projects
 
+**🤖 AI engineering**
+
 | Project | What it is | Stack |
 |---|---|---|
 | [**Library AI Assistant**](https://github.com/AnjanRimal/library-ai-assistant) | Claude-powered assistant with RAG, tool calling, validated structured outputs, guardrails, cost and latency tracking, and an eval suite that gates CI. Can use my Spring Boot library-api as its catalog. | Python, Claude API, FastAPI |
+
+**🔐 Secure backend APIs**
+
+| Project | What it is | Stack |
+|---|---|---|
+| [**Mini Twitter**](https://github.com/AnjanRimal/mini-twitter) | Social API with JWT auth, tweets, likes, follow/unfollow and a personalized timeline | Spring Boot, Spring Security, JWT, MySQL |
+| [**Blog API**](https://github.com/AnjanRimal/blog-api) | Blogging API with role-based access (user/admin), author-only edits and public reads | Spring Boot, Spring Security, JWT, MySQL |
+| [**Library API**](https://github.com/AnjanRimal/library-api) | Library system with a many-to-many author/book model, DTOs and a borrow/return workflow | Spring Boot, JPA, MySQL |
+| [**Employee API**](https://github.com/AnjanRimal/employee-api) | Employee and department management with validation and custom exception handling | Spring Boot, JPA, MySQL |
+| [**Student CRUD API**](https://github.com/AnjanRimal/student-crud-api) | Clean CRUD API that runs with zero setup on an in-memory database | Spring Boot, JPA, H2 |
+
+**🌐 Web**
+
+| Project | What it is | Stack |
+|---|---|---|
 | [**Ventrora**](https://github.com/AnjanRimal/ventrora) · [live ↗](https://ventrora.vercel.app) | Full e-commerce storefront for a luxury fragrance brand: collections, product pages, cart drawer, 3-step checkout, wishlist, accounts and a scent-finder quiz | React 18, Vite, Vercel |
-| [**library-api**](https://github.com/AnjanRimal/library-api) | RESTful library management service | Java, Spring Boot |
-| [**student-crud-api**](https://github.com/AnjanRimal/student-crud-api) | CRUD REST API for student records | Java, Spring Boot |
-| [**Django-Contact-Form**](https://github.com/AnjanRimal/Django-Contact-Form) | Contact form web app with server-side handling | Python, Django |
+| [**anjanrimal.com**](https://github.com/AnjanRimal/Anjanrimal.com) · [live ↗](https://anjanrimal.com/) | My portfolio site | HTML, CSS, JavaScript |
+| [**Django Contact Form**](https://github.com/AnjanRimal/Django-Contact-Form) | Contact form that emails submissions over SMTP | Python, Django |
+
+<sub>Where I started: [hello-world-api](https://github.com/AnjanRimal/hello-world-api), my first Spring Boot API.</sub>
 
 ---
 
