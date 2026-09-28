@@ -18,6 +18,7 @@
 - 🎓 Studied at **Webster University**
 - ☕ Backend focus: **Java & Spring Boot** REST APIs
 - ⚛️ Frontend: **React** (Vite), responsive, production-deployed UIs
+- 🤖 AI engineering: **LLM apps** with RAG, tool calling, structured outputs and evals
 - ☁️ Cloud & DevOps: **AWS**, **Terraform**, CI/CD pipelines
 - 🧠 Sharpening problem-solving on [LeetCode](https://leetcode.com/u/Anjanrimal/)
 - 📫 Best way to reach me: [LinkedIn](https://www.linkedin.com/in/anjanrimal)
@@ -38,6 +39,7 @@
 <p>
   <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
   <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/REST_APIs-005571?style=flat-square&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white" />
 </p>
@@ -48,6 +50,14 @@
   <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
+</p>
+
+**AI / LLM**
+<p>
+  <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/RAG-5A67D8?style=flat-square" />
+  <img src="https://img.shields.io/badge/Tool_Calling-5A67D8?style=flat-square" />
+  <img src="https://img.shields.io/badge/LLM_Evals-5A67D8?style=flat-square" />
 </p>
 
 **Cloud & DevOps**
@@ -66,6 +76,7 @@
 
 | Project | What it is | Stack |
 |---|---|---|
+| [**Library AI Assistant**](https://github.com/AnjanRimal/library-ai-assistant) | Claude-powered assistant with RAG, tool calling, validated structured outputs, guardrails, cost and latency tracking, and an eval suite that gates CI. Can use my Spring Boot library-api as its catalog. | Python, Claude API, FastAPI |
 | [**Ventrora**](https://github.com/AnjanRimal/ventrora) · [live ↗](https://ventrora.vercel.app) | Full e-commerce storefront for a luxury fragrance brand: collections, product pages, cart drawer, 3-step checkout, wishlist, accounts and a scent-finder quiz | React 18, Vite, Vercel |
 | [**library-api**](https://github.com/AnjanRimal/library-api) | RESTful library management service | Java, Spring Boot |
 | [**student-crud-api**](https://github.com/AnjanRimal/student-crud-api) | CRUD REST API for student records | Java, Spring Boot |
