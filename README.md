@@ -19,7 +19,8 @@
 - ☕ Backend focus: **Java & Spring Boot** REST APIs secured with **Spring Security & JWT**
 - ⚛️ Frontend: **React** (Vite), responsive, production-deployed UIs
 - 🤖 AI engineering: **LLM apps** with RAG, tool calling, structured outputs and evals
-- ☁️ Cloud & DevOps: **AWS**, **Terraform**, CI/CD pipelines
+- 🧩 Distributed systems: **microservices**, **Kafka** event-driven design, service discovery
+- ☁️ Cloud & DevOps: **AWS (EKS, RDS, MSK)**, **Terraform**, **Kubernetes & Helm**, **Ansible**, CI/CD with GitHub Actions
 - 🧠 Sharpening problem-solving on [LeetCode](https://leetcode.com/u/Anjanrimal/)
 - 📫 Best way to reach me: [LinkedIn](https://www.linkedin.com/in/anjanrimal)
 
@@ -44,6 +45,9 @@
   <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white" />
   <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white" />
   <img src="https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white" />
 </p>
 
@@ -51,6 +55,7 @@
 <p>
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
 </p>
@@ -68,6 +73,10 @@
   <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
   <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
   <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
@@ -76,6 +85,31 @@
 ---
 
 ### 🚀 Featured projects
+
+### 🛒 [ShopSphere](https://github.com/shopsphere-platform): cloud-native e-commerce platform
+
+An event-driven microservices platform: 7 Spring Boot services behind an API gateway, communicating over **Kafka**, with a React storefront, provisioned on **AWS with Terraform** and deployed to **EKS with Helm** through GitHub Actions.
+
+```mermaid
+flowchart LR
+    UI[React storefront] --> GW[API Gateway<br/>JWT]
+    GW --> AUTH[Auth] & PROD[Product] & ORD[Order] & PAY[Payment<br/>Stripe] & INV[Inventory]
+    ORD -- order-created --> K[(Kafka)]
+    PAY -- payment-completed / failed --> K
+    K --> INV & NOTIF[Notification]
+    EUREKA[Eureka discovery] -.- GW
+```
+
+| Layer | What I built |
+|---|---|
+| **Services** | [Auth](https://github.com/shopsphere-platform/shopsphere-auth-service) (JWT), [Product](https://github.com/shopsphere-platform/shopsphere-product-service) (search, featured), [Order](https://github.com/shopsphere-platform/shopsphere-order-service), [Payment](https://github.com/shopsphere-platform/shopsphere-payment-service) (Stripe intents + webhooks), [Inventory](https://github.com/shopsphere-platform/shopsphere-inventory-service) (Redis, low-stock alerts), [Notification](https://github.com/shopsphere-platform/shopsphere-notification-service); Spring Boot, PostgreSQL per service |
+| **Platform** | [API Gateway](https://github.com/shopsphere-platform/shopsphere-api-gateway) (Spring Cloud Gateway, JWT validation), [Eureka discovery server](https://github.com/shopsphere-platform/shopsphere-discovery-server) |
+| **Events** | Kafka topics `order-created`, `payment-completed` and `payment-failed` decouple ordering, payment, inventory and notifications |
+| **Frontend** | [Storefront](https://github.com/shopsphere-platform/shopsphere-storefront): React, Vite, Tailwind, React Router |
+| **Infrastructure** | [Terraform](https://github.com/shopsphere-platform/shopsphere-infrastructure) modules for VPC, EKS, 6× RDS Postgres, MSK (Kafka) and ElastiCache (37 AWS resources); Ansible turns Terraform outputs into Kubernetes Secrets; one reusable Helm chart deploys all 9 components |
+| **CI/CD** | GitHub Actions per service: test → build → Docker image to GHCR → `helm upgrade` on EKS |
+
+### More projects
 
 **🤖 AI engineering**
 
